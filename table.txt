@@ -1,0 +1,31 @@
+CREATE TABLE pettable (
+    PetID int NOT NULL,
+    PetName varchar(25),
+    PetAge int,
+    PRIMARY KEY (PetID),
+);
+
+CREATE TABLE petTypetable (
+    PetTypeID int NOT NULL,
+    PetType varchar(10),
+    PRIMARY KEY (PetTypeID),
+    FOREIGN KEY (PetTypeID) REFERENCES Persons(PetID)
+);
+
+
+CREATE TABLE ownertable (
+    OwnerID int NOT NULL,
+    OwnerName varchar(25),
+    PRIMARY KEY (OwnerID),
+    FOREIGN KEY (OwnerID) REFERENCES Persons(PetID)
+);
+
+CREATE TABLE  procedureTable(
+    ProcedureID int NOT NULL,
+    ProcedureDescp varchar(50),
+    visitDate date,
+    PRIMARY KEY (ProcedureID),
+    FOREIGN KEY (ProcedureID) REFERENCES Persons(PetID)
+);
+
+
