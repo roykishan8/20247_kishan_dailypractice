@@ -1,0 +1,16 @@
+CREATE TABLE HEALTH (PetID NOT NULL PRIMARY KEY,PetName VARCHAR(25),PetType VARCHAR(10),PetAge INT,OwnerName CHAR(25),visitDate DATE,ProcedureID INT(10),ProcedureDescp VARCHAR(50))
+INSERT INTO HEALTH (PetID,PetName,PetType,PetAge,OwnerName,visitDate,ProcedureID,ProcedureDescp) VALUES
+                   (246,'ROVER','DOG',12,'SAM COOK','13-01-2002',1,'RABIES VACCINATION'),
+                   (246,'ROVER','DOG',12,'SAM COOK','27-03-2002',10,'EXAMINE AND TREAT WOUND),
+                   (246,'ROVER','DOG',12,'SAM COOK','02-04-2002',5,'HEART WORM TEST'),
+                   (298,'SPOT','DOG',2,'TERRY KIM','21-01-2002,8,'TETANUS VACCINATION'),
+                   (298,'SPOT','DOG',2,'TERRY KIM','10-03-2002',5,'HEART WORM TEST'),
+                   (341,''MORRIS','CAT',4,'SAM COOK','23-01-2001',1,'RABIES VACINATION'),
+                   (341,''MORRIS','CAT',4,'SAM COOK','13-01-2002',1,'RABIES VACINATION'),
+                   (519,'TWEEDY','BIRD',2,'TERRY KIM','30-04-2002',20,'ANNUAL CHECH UP'),
+                   (519,'TWEEDY','BIRD',2,'TERRY KIM','30-04-2002',12,'EYE WASH'),
+                   (444,'SHUMPI','BIRD',5,'MAC','30-07-2002',20,'ANNUAL CHECH UP'),
+                   (444,'SHUMPI','BIRD',5,'MAC','30-07-2002',12,'ANNUAL CHECH UP'),
+                   (222,'MILO','DOG',10,'SANJOSE','13-02-2003',1,'RABIES VACCINATION'),
+                   (222,'MILO','DOG',10,'SANJOSE','27-03-2003',10,'EXAMINE AND TREAT WOUND'),
+                   (222,'MILO','DOG',10,'SANJOSE','12-04-2003',5,'HEART WORM TEST');
