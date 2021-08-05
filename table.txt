@@ -4,6 +4,23 @@ CREATE TABLE pettable (
     PetAge int,
     PRIMARY KEY (PetID),
 );
+INSERT INTO pettable (PetID,PetName,PetAge) VALUES
+                   (246,'ROVER',12),
+                   (246,'ROVER',12),
+                   (246,'ROVER',12),
+                   (298,'SPOT',2),
+                   (298,'SPOT',2),
+                   (341,''MORRIS',4),
+                   (341,''MORRIS',4),
+                   (519,'TWEEDY',2),
+                   (519,'TWEEDY',2),
+                   (444,'SHUMPI',5),
+                   (444,'SHUMPI',5),
+                   (222,'MILO',10),
+                   (222,'MILO',10),
+                   (222,'MILO',10);
+
+
 
 CREATE TABLE petTypetable (
     PetTypeID int NOT NULL,
@@ -11,6 +28,8 @@ CREATE TABLE petTypetable (
     PRIMARY KEY (PetTypeID),
     FOREIGN KEY (PetTypeID) REFERENCES Persons(PetID)
 );
+
+
 
 
 CREATE TABLE ownertable (
