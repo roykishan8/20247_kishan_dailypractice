@@ -1,0 +1,101 @@
+select empno,sal,ename,job,sal12 as 'Average salary' from emp order by sal;
+
+SELECT empno,sal,ename,job,(1.3sal) as hiked salary from emp where job='CLERK';
+
+SELECT empno,sal,ename,sal1.212 as 'updated annual salary' from emp where ename='FORD';
+
+SELECT ename,sal,comm,(sal+ifnull(comm,0)) as 'takehome' from emp;
+
+select ename  job as 'new string' from emp;   
+
+SELECT  from emp where deptno=10;
+
+What is the emp num of 'James'
+Waht is the salary of 'king'
+Who is the President for organization
+Which dept is in Boston
+What is the dept number of accounting
+List Employee names drawing sal bet 1500 & 3000
+List all details of all the managers
+Give emp details for employees drawing commission
+Who is the manager for dept no 30
+List employees who joined before april-1981
+What is the salary of following
+King, blake,ford,smith
+
+Give the hiredate of president & managers
+SELECT ename,empno 
+FROM emp 
+WHERE ename LIKE 'JAMES';
+
+SELECT ename,sal 
+FROM emp 
+WHERE ename 
+LIKE 'KING';
+
+SELECT ename,job 
+FROM emp 
+where job 
+LIKE'PRESIDENT';
+
+SELECT ename,sal 
+FROM emp 
+WHERE sal1500 and sal3000;
+
+SELECT  
+FROM emp 
+WHERE job LIKE 'MANAGER';
+
+SELECT  
+FROM emp 
+WHERE COMM!='null';
+
+SELECT  
+FROM emp 
+WHERE JOB='MANAGER' AND DEPTNO=30;
+        
+SELECT  
+FROM emp
+WHERE HIREDATE'1-APR-1981';
+        
+
+SELECT ename,sal 
+FROM emp 
+WHERE ename IN('KING','BLAKE','FORD','SMITH');
+        
+
+SELECT ENAME,JOB,HIREDATE 
+FROM EMP 
+WHERE JOB IN('PRESIDENT','MANAGER'); 
+
+
+Who is drawing salary less than 3500
+List the details of all the clerks
+List the names starting with A
+List the names whose name ends with D
+List the names in which 3rd  character is L
+
+
+SELECT ename,sal
+FROM emp
+WHERE sal3500;
+
+SELECT  
+FROM emp
+WHERE job LIKE 'CLERK';
+
+SELECT ename
+FROM emp 
+WHERE ename LIKE 'A%';
+
+SELECT ename
+FROM EMP
+WHERE ename LIKE '%D';
+
+SELECT ename
+FROM emp 
+WHERE ename LIKE '__L%';
+
+        
+        
+                  
