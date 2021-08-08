@@ -1,0 +1,144 @@
+
+
+What is the total salary for each department?
+
+SELECT deptno,sum(sal)
+FROM emp 
+GROUP BY deptno;
+
+Who is drawing the lowest salary in dept 10
+
+SELECT ename,MIN(sal) as 'Lowest salary'
+FROM emp WHERE deptno=10;
+
+What is the average salary for Managers
+
+SELECT AVG(sal) as 'AVERAGE SALARY OF MANAGER' 
+FROM emp WHERE job LIKE 'MANAGER';
+
+What is the total salary for salesman
+
+SELECT SUM(sal) as 'total salary salesman' 
+FROM emp 
+WHERE job LIKE 'SALESMAN';
+
+How many persons are in each role
+
+SELECT job,COUNT(*) 
+FROM emp GROUP BY JOB;
+
+        
+How many persons are there in each role joined after Apr 81
+
+SELECT job,COUNT(*) 
+FROM emp  WHERE hiredate>'1981-04-30'
+GROUP BY job;
+
+        
+What is the highest salary among analyst
+
+SELECT MAX(sal) AS 'HIGHEST SALARY'
+FROM emp WHERE job LIKE 'ANALYST';
+
+        
+What is the highest commission paid
+
+SELECT MAX(COMM) AS 'MAX COMMISSION'
+FROM EMP ;
+
+      
+
+How many departments are there
+
+SELECT COUNT(DISTINCT DEPTNO) AS 'NUMBER OF DEPT' 
+FROM EMP ;
+
+        
+
+What is the average salary for each department
+
+SELECT DEPTNO,AVG(SAL) AS 'AVERAGE SALARY' 
+FROM emp
+GROUP BY deptno;
+
+        
+
+Which job role is having average salary less than 2000 and arrange in the order of average salary
+
+ 
+SELECT JOB,AVG(SAL) AS 'AVERAGE SALARY' 
+FROM emp 
+GROUP BY job 
+HAVING AVG(SAL)<2000;
+
+
+which department total salary is more than 10000?
+
+
+SELECT DEPTNO,SUM(SAL) AS 'SALARY>10000' 
+FROM emp 
+GROUP BY deptno
+HAVING SUM(SAL)>10000;
+
+
+
+
+Select the last name and job id from all employees whose department id is equal to Accounting.
+
+SELECT e.ename , e.empno
+FROM emp e,dept d
+WHERE e.deptno=d.deptno AND dname LIKE "ACCOUNTING";
+
+Find the first names of all employees whose salaries are greater than the minimum salary for the Manager
+SELECT ename,sal
+FROM emp
+where sal > ( SELECT MIN(sal) FROM emp WHERE job like "MAN%");
+
+Display the details of the employee working in Chicago
+
+SELECT * 
+FROM emp
+JOIN dept ON EMP.DEPTNO=DEPT1.DEPTNO 
+WHERE loc LIKE "CHICAGO";   
+
+How many employees work in Chicago?
+
+SELECT COUNT(*)
+FROM emp 
+JOIN dept ON EMP.DEPTNO=DEPT1.DEPTNO 
+WHERE loc='CHICAGO';
+
+Which employees work in Chicago?
+
+SELECT ename
+FROM emp 
+JOIN DEPT ON EMP.DEPTNO=DEPT.DEPTNO 
+WHERE loc='CHICAGO';
+
+ 
+List the employees’ names and cities in which they work. Order the list by city.
+
+SELECT ename,loc 
+FROM emp 
+JOIN dept ON emp.DEPTNO=dept.DEPTNO 
+BY loc;
+    
+List the name and designation of the employees who does not report to anybody.
+SELECT  ename , job
+FROM emp
+WHERE mgr IS NULL;
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        
+                  
