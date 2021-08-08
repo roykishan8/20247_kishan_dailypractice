@@ -1,14 +1,20 @@
-select empno,sal,ename,job,sal12 as 'Average salary' from emp order by sal;
+SELECT empno,sal,ename,job,sal12 as 'Average salary' 
+FROM emp ORDER BY sal;
 
-SELECT empno,sal,ename,job,(1.3sal) as hiked salary from emp where job='CLERK';
+SELECT empno,sal,ename,job,(1.3sal) as 'hiked salary' 
+FROM emp WHERE job LIKE'CLERK';
 
-SELECT empno,sal,ename,sal1.212 as 'updated annual salary' from emp where ename='FORD';
+SELECT empno,sal,ename,sal1.212 as 'updated annual salary' 
+FROM emp WHERE ename LIKE 'FORD';
 
-SELECT ename,sal,comm,(sal+ifnull(comm,0)) as 'takehome' from emp;
+SELECT ename,sal,comm,(sal+ifnull(comm,0)) as 'takehome' 
+FROM emp;
 
-select ename  job as 'new string' from emp;   
+SELECT ename  job as 'new string' 
+FROM emp;   
 
-SELECT  from emp where deptno=10;
+SELECT * 
+FROM emp WHERE deptno=10;
 
 What is the emp num of 'James'
 Waht is the salary of 'king'
@@ -22,8 +28,9 @@ Who is the manager for dept no 30
 List employees who joined before april-1981
 What is the salary of following
 King, blake,ford,smith
-
 Give the hiredate of president & managers
+
+
 SELECT ename,empno 
 FROM emp 
 WHERE ename LIKE 'JAMES';
