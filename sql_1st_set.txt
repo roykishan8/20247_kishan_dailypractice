@@ -169,10 +169,10 @@ WHERE job like "SALESMAN";
 
 30.	Which department is having the lowest average salary?
 
-SELECT deptno,AVG(sal) AS [lowest dept sal]
-FORM emp 
-GROUB BY deptno
-HAVING MIN(DEPTSAL);
+SELECT dname,avg(sal) as 'avgsal' 
+FROM emp JOIN dept ON emp.deptno=dept.deptno 
+GROUP BY dname 
+ORDER BY avgsal LIMIT 1;
 
 31.	How many persons are in each role
 
