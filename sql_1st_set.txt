@@ -73,7 +73,7 @@ WHERE ename LIKE '%A%';
 
 SELECT ename,empno,sal,hiredate
 FROM emp
-WHERE hiredate < '19-DEC-81';
+WHERE CAST(hiredate AS int) < 19;
 
 14.	What is the employee number of 'James' 
 
