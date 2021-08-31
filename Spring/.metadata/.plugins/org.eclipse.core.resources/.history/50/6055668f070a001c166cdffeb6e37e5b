@@ -1,0 +1,24 @@
+package com.sonata.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.sonata.DAOimpl.CaseStudyImpl;
+import com.sonata.model.Task;
+
+
+
+
+public class CaseStudyController {
+
+	@Autowired
+	private CaseStudyImpl taskService;
+	
+	@GetMapping(value="/task")
+	public List<Task> getTask(){
+		return taskService.getAllTask();
+	}
+
+}

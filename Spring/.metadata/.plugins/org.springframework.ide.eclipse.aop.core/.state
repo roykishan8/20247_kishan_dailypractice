@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="SpringRestAngualrExample"/>
+<aop-project name="SpringJDBCExample"/>
+<aop-project name="mvc_basics_RequestMapping"/>
+<aop-project name="SpringSimpleMVCProject"/>
+<aop-project name="SpringFormErrorExample"/>
+<aop-project name="SpringJPACRUD"/>
+<aop-project name="SpringSimpleCoreProject"/>
+<aop-project name="SpringCaseStudy"/>
+<aop-project name="SpringCaseStudy-1"/>
+<aop-project name="SpringRest"/>
+</aop-reference-model>

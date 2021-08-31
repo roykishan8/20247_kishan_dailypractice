@@ -1,0 +1,5 @@
+package com.sonata.qualifier;
+
+public class BeanConfiguration {
+
+}

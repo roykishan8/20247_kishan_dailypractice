@@ -1,0 +1,9 @@
+INDEX VERSION 1.4+D:\sonata\generic training\springworkspace\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3158651446.index
+1769638268.index
+1599387929.index
+866293775.index
+1383387197.index
+1226326231.index
+335652701.index
+1880643077.index

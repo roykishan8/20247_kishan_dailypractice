@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;com.sonata.Repository&apos; to &apos;SpringCaseStudy-2-jpa/src/main/java&apos;&#x0D;&#x0A;- Original project: &apos;SpringRest&apos;&#x0D;&#x0A;- Destination element: &apos;SpringCaseStudy-2-jpa/src/main/java&apos;&#x0D;&#x0A;- Original element: &apos;SpringRest/src/main/java/com.sonata.Repository&apos;" description="Copy package" destination="=SpringCaseStudy-2-jpa/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.sonata.Repository" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1630393674821" version="1.0"/>
+</session>

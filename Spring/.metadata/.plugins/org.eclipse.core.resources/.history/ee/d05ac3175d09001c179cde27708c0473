@@ -1,0 +1,7 @@
+package com.sonata.DAOIntf;
+import java.util.List;
+
+public class EmployeeIntf {
+	public List<Employee> getAllEmployee();
+
+}

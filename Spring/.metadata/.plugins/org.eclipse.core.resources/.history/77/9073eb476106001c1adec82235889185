@@ -1,0 +1,14 @@
+package com.sonata.qualifier;
+
+import org.springframework.context.annotation.Bean;
+
+public class BeanConfiguration {
+	@Bean(name = "myaddress")
+	public Address getMyAddress() {
+		Address a1=new Address();
+		a1.setCity("bangalore");
+		a1.setState("karnataka");
+		return a1;
+	}
+
+}

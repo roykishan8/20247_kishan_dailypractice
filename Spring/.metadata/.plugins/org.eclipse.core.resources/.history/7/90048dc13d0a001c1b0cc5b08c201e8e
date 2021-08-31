@@ -1,0 +1,142 @@
+package com.sonata.controller;
+
+import java.util.List;
+import java.util.Optional;
+
+import javax.validation.Valid;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.sonata.Repository.LoginRepository;
+import com.sonata.Repository.ProductRepository;
+import com.sonata.Repository.UserRepository;
+
+//import com.sonata.DAOimpl.CaseStudyImpl;
+
+import com.sonata.model.Login;
+import com.sonata.model.Task;
+
+import com.sonata.model.User;
+
+
+
+@RestController
+@CrossOrigin(origins = "http://localhost:4200")
+public class CaseStudyController {
+
+Optional<Task> p1;
+Optional<User> p2;
+Optional<Login> p3;
+
+	
+	@Autowired
+	private ProductRepository prepository;
+	
+	@Autowired
+	private UserRepository userRepository;
+	
+	@Autowired
+	private LoginRepository loginRepository;
+	@GetMapping("/task")
+	public List<Task> getAllProducts()
+	{
+		return prepository.findAll();
+	}
+	@GetMapping(value= "/task/{id}")
+	public ResponseEntity gettaskById(@PathVariable(value="id") Long taskId)
+	{
+		p1= prepository.findById(taskId);
+		return ResponseEntity.ok().body(p1);
+	}
+	@PostMapping(value = "/task")
+	public Task saveProduct(@RequestBody Task prod)
+	{
+		return prepository.save(prod);
+	}
+	@PutMapping(value="/task/{id}")
+	public ResponseEntity updateProduct(@PathVariable(value="id") Long pId, @Valid @RequestBody Task pdata) {
+		p1 = prepository.findById(pId);
+		Task p2 = p1.get();
+		
+		p2.setCreatedOn(pdata.getCreatedOn());
+		p2.setDescription(pdata.getDescription());
+		p2.setIsBookmarked(pdata.getIsBookmarked());
+		p2.setName(pdata.getName());
+		p2.setNotes(pdata.getNotes());
+		p2.setOwnerId(pdata.getOwnerId());
+		p2.setPriority(pdata.getPriority());
+		p2.setStatus(pdata.getStatus());
+		p2.setStatusChangedOn(pdata.getStatusChangedOn());
+		p2.setTaskId(pdata.getTaskId());
+		
+		
+		Task updateProduct = prepository.save(p2);
+		return ResponseEntity.ok(updateProduct);
+	}
+	@GetMapping("/user")
+	public List<User> getAlluser()
+	{
+		return userRepository.findAll();
+	}
+	@GetMapping(value= "/user/{id}")
+	public ResponseEntity getuserById(@PathVariable(value="id") Long userId)
+	{
+		p2= userRepository.findById(userId);
+		return ResponseEntity.ok().body(p2);
+	}
+	@PostMapping(value = "/user")
+	public User saveProduct(@RequestBody User prod)
+	{
+		return userRepository.save(prod);
+	}
+	@GetMapping("/login")
+	public List<Login> getAlllogin()
+	{
+		return loginRepository.findAll();
+	}
+	@GetMapping(value= "/login/{id}")
+	public ResponseEntity getloginById(@PathVariable(value="id") Long loginId)
+	{
+		p3= loginRepository.findById(loginId);
+		return ResponseEntity.ok().body(p3);
+	}
+	@PostMapping(value = "/login")
+	public Login saveProduct(@RequestBody Login prod)
+	{
+		return loginRepository.save(prod);
+	}
+	
+	
+	
+	
+	
+	/*
+	@PutMapping(value="/products/{id}")
+	public ResponseEntity updateProduct(@PathVariable(value="id") Long pId, @Valid @RequestBody Product pdata) {
+		p1 = prepository.findById(pId);
+		Product p2 = p1.get();
+		
+		p2.setpId(pdata.getpId());
+		p2.setpName(pdata.getpName());
+		p2.setpPrice(pdata.getpPrice());
+		
+		Product updateProduct = prepository.save(p2);
+		return ResponseEntity.ok(updateProduct);
+	}
+	
+	@DeleteMapping(value="/products/{id}")
+	public ResponseEntity deleteProduct(@PathVariable(value="id")Long pId) {
+		prepository.deleteById(pId);
+		return ResponseEntity.noContent().build();
+	}*/
+}

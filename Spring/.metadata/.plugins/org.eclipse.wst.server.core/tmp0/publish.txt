@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Sun Aug 29 18:41:58 IST 2021
+org.eclipse.jst.jee.server\:jspexample=D\:\\sonata\\generic training\\sts-bundle\\pivotal-tc-server\\instances\\base-instance\\wtpwebapps\\jspexample
+org.eclipse.jst.jee.server\:ServletExampleRequest=D\:\\sonata\\generic training\\sts-bundle\\pivotal-tc-server\\instances\\base-instance\\wtpwebapps\\ServletExampleRequest
